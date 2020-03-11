@@ -1,0 +1,6 @@
+p  {
+    width: 20em;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}

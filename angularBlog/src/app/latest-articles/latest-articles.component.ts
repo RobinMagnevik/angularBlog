@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ArticleInterface } from '../article-interface'
+import { ArticleDataService } from '../article-data.service'
 
 @Component({
   selector: 'app-latest-articles',
@@ -7,9 +9,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LatestArticlesComponent implements OnInit {
 
-  constructor() { }
+  fiveArticles: ArticleInterface[];
+
+  constructor(public articleDataService: ArticleDataService) { }
 
   ngOnInit(): void {
+    this.fiveArticles = this.articleDataService.fetchFiveArticles();
   }
 
 }
