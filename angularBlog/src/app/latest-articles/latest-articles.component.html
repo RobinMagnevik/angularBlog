@@ -1,1 +1,8 @@
-<p>latest-articles works!</p>
+<ng-container>
+    <div *ngFor="let data of fiveArticles">
+        <h3>{{data.title}}</h3>
+        Author: {{data.author}}<br>
+        Readtime: {{data.readtime}}h.<br>
+        <p>{{data.text}}</p>
+    </div>
+</ng-container>

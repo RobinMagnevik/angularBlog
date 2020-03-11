@@ -13,7 +13,7 @@ const routes: Routes = [
   { path: 'latest-articles', component: LatestArticlesComponent }, 
   { path: 'all-articles', component: AllArticlesComponent }, 
   { path: 'log-in', component: LogInComponent },
-  { path: 'add-articles', component: AddArticleComponent }
+  { path: 'add-article', component: AddArticleComponent }
 ];
 
 

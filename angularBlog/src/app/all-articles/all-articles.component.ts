@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ArticleInterface } from '../article-interface'
+import { ArticleDataService } from '../article-data.service'
 
 @Component({
   selector: 'app-all-articles',
@@ -7,9 +9,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AllArticlesComponent implements OnInit {
 
-  constructor() { }
+  allArticles: ArticleInterface[];
+
+  constructor(public articleDataService: ArticleDataService) { }
 
   ngOnInit(): void {
+    this.allArticles = this.articleDataService.fetchAllArticles();
   }
 
 }
