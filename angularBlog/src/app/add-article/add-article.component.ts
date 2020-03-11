@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+//import { Blogpost } from '../blogpost';
 
 @Component({
   selector: 'app-add-article',
@@ -7,9 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AddArticleComponent implements OnInit {
 
+  //userModel = new Blogpost("", "", "", null)
+
   constructor() { }
 
   ngOnInit(): void {
   }
 
+  /*onSubmit() {
+    console.log(this.userModel);
+  }*/
 }

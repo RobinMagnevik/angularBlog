@@ -1,0 +1,31 @@
+ul li{
+    display: inline-block; 
+  }
+  
+  .headernav{
+    text-align: center;
+    height: 120px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    z-index: 100;
+    background-color: #F4DCD6;
+  }
+  
+  h1{
+    color: #DFC7C1;
+    margin-left: 40px; 
+    margin-top: 15px;
+  }
+  
+  .headermenu a{
+    text-decoration: none;
+    color: white;
+    margin: 20px;
+    text-transform: uppercase;
+  } 
+  
+  .headermenu a:hover{
+    color: #DFC7C1; 
+  } 
