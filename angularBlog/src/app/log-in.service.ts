@@ -5,15 +5,19 @@ import { AddArticle } from './add-article';
   providedIn: 'root'
 })
 export class LogInService {
-  $isLoggedIn = new EventEmitter();
+  $event = new EventEmitter();
   navbar: AddArticle = {
     addArticles: "",
+    deleteButton: "",
+    welcome: ""
   };
 
   constructor() { }
 
   login() { 
     this.navbar.addArticles = "Add article";
-    this.$isLoggedIn.emit(this.navbar)
+    this.navbar.deleteButton = "Delete";
+    this.navbar.welcome = "You're logged in!"
+    this.$event.emit(this.navbar)
   }
 }

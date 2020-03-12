@@ -9,14 +9,14 @@ import { AddArticle } from '../add-article';
 })
 export class HeaderComponent implements OnInit {
 
-  isUserLogged = false;
+  isLoggedIn = false;
   navbar: AddArticle;
   constructor(private loginService: LogInService) { }
 
   ngOnInit(): void {
-    this.loginService.$isLoggedIn
+    this.loginService.$event
     .subscribe( (data) =>{
-        this.isUserLogged = true;
+        this.isLoggedIn = true;
         this.navbar = data;
     })
   }
