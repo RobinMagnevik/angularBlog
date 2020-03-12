@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { LogInService } from '../log-in.service';
+import { AddArticle } from '../add-article';
 
 @Component({
   selector: 'app-header',
@@ -7,9 +9,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor() { }
+  isUserLogged = false;
+  navbar: AddArticle;
+  constructor(private loginService: LogInService) { }
 
   ngOnInit(): void {
+    this.loginService.$isLoggedIn
+    .subscribe( (data) =>{
+        this.isUserLogged = true;
+        this.navbar = data;
+    })
   }
 
 }
