@@ -10,9 +10,7 @@ import { RangeValueAccessor } from '@angular/forms';
 })
 export class AddArticleComponent implements OnInit {
   userModel = new ArticleClass("", "", "", null)
-  onSubmit() {
-    console.log(this.userModel);
-  }
+
   newArticle: ArticleClass;
   articleTitle:string;
   articleContent:string;
@@ -22,22 +20,21 @@ export class AddArticleComponent implements OnInit {
   constructor(public articleDataService: ArticleDataService) { }
 
   ngOnInit(): void {
-    this.newArticle = new ArticleClass('', '', '', 0);
   }
-
-  title(event){
+  
+  newTitle(event){
     this.articleTitle = event.target.value;
   }
-  content(event){
+  newContent(event){
     this.articleContent = event.target.value;
   }
-  writer(event){
+  newWriter(event){
     this.articleWriter = event.target.value;
   }
-  time(event){
+  newTime(event){
     this.articleTime = event.target.value;
   }
   addNewArticle(){
-    this.articleDataService.newArticleAdd(this.articleTitle, this.articleContent, this.articleWriter,this.articleTime)
+    this.articleDataService.addArticleList(this.articleTitle, this.articleContent, this.articleWriter,this.articleTime)
   }
 }

@@ -1,6 +1,6 @@
 <div class="container-fluid mb-5">
     <h1>Lägg till artiklar</h1>
-    <form #userForm="ngForm" (ngSubmit)="onSubmit()" novalidate ng-submit="">
+    <form #userForm="ngForm"  novalidate ng-submit="">
 
 
         <div class="form-group">
@@ -8,7 +8,7 @@
                 <small [class.d-none]="title.valid || title.touched">(Required field*)</small>
             </label> 
             <small class="text-danger" [class.d-none]="title.valid || title.untouched"> (Minimum 10 symbols required)</small>
-            <input type="text" (keyup)='title($event)' required #title="ngModel" minlength="10" [class.is-valid]="title.valid" [class.is-invalid]="title.invalid && title.touched" class="form-control" name="Title" [(ngModel)]="userModel.title">
+            <input type="text" (keyup)='newTitle($event)' required #title="ngModel" minlength="10" [class.is-valid]="title.valid" [class.is-invalid]="title.invalid && title.touched" class="form-control" name="Title" [(ngModel)]="userModel.title">
             
         </div> 
 
@@ -17,12 +17,12 @@
                 <small [class.d-none]="title.valid || title.touched">(Required field*)</small>
             </label> 
             <small class="text-danger" [class.d-none]="content.valid || content.untouched"> (Content is required)</small>
-            <textarea  type="text" (keyup)='content($event)' cols="3" rows="8" required #content="ngModel" [class.is-valid]="content.valid" [class.is-invalid]="content.invalid && content.touched" class="form-control" name="Content" [(ngModel)]="userModel.content"></textarea>
+            <textarea  type="text" (keyup)='newContent($event)' cols="3" rows="8" required #content="ngModel" [class.is-valid]="content.valid" [class.is-invalid]="content.invalid && content.touched" class="form-control" name="Content" [(ngModel)]="userModel.content"></textarea>
         </div>
 
         <div class="form-group">
             <label>Writer</label> <small> (Optional field)</small>
-            <input type="text" (keyup)='writer($event)' class="form-control" name="Writer" [(ngModel)]="userModel.writer">
+            <input type="text" (keyup)='newWriter($event)' class="form-control" name="Writer" [(ngModel)]="userModel.writer">
             
         </div>
 
@@ -31,10 +31,10 @@
                 <small [class.d-none]="timetoread.valid || timetoread.touched"> (Required field*) </small> 
             </label> 
             <small class="text-danger" [class.d-none]="timetoread.valid || timetoread.untouched"> (Enter numerical minutes)</small>
-            <input type="number" (keyup)='time($event)' required #timetoread="ngModel" [class.is-valid]="timetoread.valid" [class.is-invalid]="timetoread.invalid && timetoread.touched" class="form-control" name="timeToRead" [(ngModel)]="userModel.timetoread">
+            <input type="number" (keyup)='newTime($event)' required #timetoread="ngModel" [class.is-valid]="timetoread.valid" [class.is-invalid]="timetoread.invalid && timetoread.touched" class="form-control" name="timeToRead" [(ngModel)]="userModel.timetoread">
             
         </div>
 
-        <button [disabled]="userForm.form.invalid" class="btn btn-secondary" type="submit">Submit!</button> 
+        <button (click)='addNewArticle()' [disabled]="userForm.form.invalid" class="btn btn-secondary">Submit!</button> 
     </form>
 </div>

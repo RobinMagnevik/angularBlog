@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
 import { ArticleInterface } from './article-interface';
-import { ArticleClass } from './article-class';
 
 @Injectable({
   providedIn: 'root'
@@ -25,7 +24,7 @@ export class ArticleDataService {
     return this.articles;
   };
   newArticle;
-  newArticleAdd(title, content, writer, time){
+  addArticleList(title, content, writer, time){
     this.newArticle = {title:title, author:writer, readtime:time, text:content};
     this.articles.unshift(this.newArticle);
   }
