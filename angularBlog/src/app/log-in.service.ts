@@ -14,10 +14,14 @@ export class LogInService {
 
   constructor() { }
 
+  isLoggedIn: boolean = false;
+
   login() { 
+    console.log('login funktion körs')
     this.navbar.addArticles = "Add article";
     this.navbar.deleteButton = "Delete";
     this.navbar.welcome = "You're logged in!"
     this.$event.emit(this.navbar)
+    this.isLoggedIn = true;
   }
 }

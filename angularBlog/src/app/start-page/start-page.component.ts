@@ -13,16 +13,17 @@ export class StartPageComponent implements OnInit {
 
   latestArticle: ArticleInterface;
 
-  isLoggedIn = false;
+  isLoggedIn: boolean;
   navbar: AddArticle;
 
   constructor(public articleDataService : ArticleDataService, private loginService: LogInService) { }
 
   ngOnInit(): void {
     this.latestArticle = this.articleDataService.fetchLatestArticle();
-
+    this.isLoggedIn = this.loginService.isLoggedIn;
     this.loginService.$event
     .subscribe( (data) =>{
+      console.log('kommer ett event från login')
         this.isLoggedIn = true;
         this.navbar = data;
     })

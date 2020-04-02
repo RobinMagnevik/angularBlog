@@ -28,6 +28,9 @@ export class ArticleDataService {
     this.newArticle = {title:title, author:writer, readtime:time, text:content};
     this.articles.unshift(this.newArticle);
   }
-
+  deleteArticle(article){
+    this.articles = this.articles.filter
+    (item => item.title !== article)
+  }
   constructor() { }
 }

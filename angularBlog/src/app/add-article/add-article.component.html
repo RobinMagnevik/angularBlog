@@ -35,6 +35,6 @@
             
         </div>
 
-        <button class="btn btn-secondary" type="submit" [disabled]="userForm.form.invalid">Submit!</button> 
+        <button (click)='addNewArticle()' [disabled]="userForm.form.invalid" class="btn btn-secondary">Submit!</button> 
     </form>
 </div>
