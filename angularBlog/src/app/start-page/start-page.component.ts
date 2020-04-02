@@ -23,7 +23,6 @@ export class StartPageComponent implements OnInit {
     this.isLoggedIn = this.loginService.isLoggedIn;
     this.loginService.$event
     .subscribe( (data) =>{
-      console.log('kommer ett event från login')
         this.isLoggedIn = true;
         this.navbar = data;
     })
