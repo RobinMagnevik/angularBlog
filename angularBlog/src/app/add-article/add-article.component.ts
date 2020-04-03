@@ -36,9 +36,8 @@ export class AddArticleComponent implements OnInit {
     this.articleTime = event.target.value;
   }
   addNewArticle(){
-    this.articleDataService.addArticleList(this.articleTitle, this.articleContent, this.articleWriter,this.articleTime)
+	this.articleDataService.addArticleList(this.articleTitle, this.articleContent, this.articleWriter,this.articleTime)
   }
-
   submittedMessage(){
 	  this.message = !this.message;
   }
