@@ -1,6 +1,7 @@
+<br><br>
 <ng-container>
     <div *ngFor="let data of allArticles">
-        <h3>{{data.title}}</h3>
+        <h3>{{data.title}}</h3><br>
 <button *ngIf="showDeleteButton" (click)="deleteArticle(data.title)">Delete</button>
     </div>
 </ng-container>

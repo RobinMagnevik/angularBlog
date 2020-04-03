@@ -1,5 +1,6 @@
+<br><br>
 <div class="container">
-    <h1>Lägg till artiklar</h1>
+    <h3>Lägg till artiklar</h3>
     <form #userForm="ngForm" novalidate ng-submit="">
 
 
@@ -17,7 +18,7 @@
                 <small [class.d-none]="title.valid || title.touched">(Required field*)</small>
             </label> 
             <small class="text-danger" [class.d-none]="content.valid || content.untouched"> (Content is required)</small>
-            <textarea  type="text" (keyup)='newContent($event)' cols="3" rows="8" required #content="ngModel" [class.is-valid]="content.valid" [class.is-invalid]="content.invalid && content.touched" class="form-control" name="Content" [(ngModel)]="userModel.content"></textarea>
+            <textarea  type="text" (keyup)='newContent($event)' cols="3" rows="5" required #content="ngModel" [class.is-valid]="content.valid" [class.is-invalid]="content.invalid && content.touched" class="form-control" name="Content" [(ngModel)]="userModel.content"></textarea>
         </div>
 
         <div class="form-group">
@@ -35,7 +36,7 @@
             
         </div>
 
-		<button (click)='addNewArticle()' (click)='userForm.reset({})' (click)='submittedMessage()' [disabled]="userForm.form.invalid" class="btn btn-secondary" >Submit!</button> 
+		<button (click)='addNewArticle()' (click)='userForm.reset({})' (click)='submittedMessage()' [disabled]="userForm.form.invalid">Submit!</button> 
 		
 		<br> <p class="message" [hidden] = "message"> Your blog post is submitted! </p>
     </form>

@@ -8,13 +8,18 @@
     left: 0;
     width: 100vw;
     z-index: 100;
-    background-color: #F4DCD6;
+	background-color: #F4DCD6;
+	background-image: url("pine.jpg");
+	background-position: top;
+	
   }
 
   p{
       color: white;
       padding: 1em;
-      font-size: 1.3em;
+	  font-size: 1.3em;
+	  width: 60%;
+	  margin-left: 15%
   }
 
 

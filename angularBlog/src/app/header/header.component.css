@@ -4,33 +4,38 @@ ul li{
   
   .headernav{
     text-align: center;
-    height: 120px;
+    height: 150px;
     position: fixed;
     top: 0;
     left: 0;
     width: 100vw;
     z-index: 100;
-    background-color: #F4DCD6;
+	background-image: url("pine.jpg");
+	background-position: bottom;
   }
   
   h1{
-    color: #DFC7C1;
+    color: white;
     margin-left: 40px; 
-    margin-top: 15px;
+    margin-top: 25px;
   }
   
   .headermenu a{
     text-decoration: none;
     color: white;
     margin: 20px;
-    text-transform: uppercase;
+	text-transform: uppercase;
+	font-size: 1.5em;
   } 
   
   .headermenu a:hover{
-    color: #DFC7C1; 
+    color: green;
   } 
 
   .welcome {
-    background-color: #B5EAD7;
-    color: white;
+    background-color: green;
+	color: black;
+	font-size: 1.5em;
+	padding: 10px;
+	border-radius: 5px;
   }
