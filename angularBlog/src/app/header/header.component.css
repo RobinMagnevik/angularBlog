@@ -29,3 +29,8 @@ ul li{
   .headermenu a:hover{
     color: #DFC7C1; 
   } 
+
+  .welcome {
+    background-color: #B5EAD7;
+    color: white;
+  }

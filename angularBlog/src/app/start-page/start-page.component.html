@@ -1,6 +1,13 @@
+
+<p *ngIf="isLoggedIn"><button>{{ navbar.deleteButton }} </button></p>
+
+
+
 <div>  
     <h3>{{latestArticle.title}}</h3>
     Author: {{latestArticle.author}}<br>
-    Readtime: {{latestArticle.readtime}}h.<br>
+    Readtime: {{latestArticle.readtime}}min.<br>
     <p>{{latestArticle.text}}</p> 
 </div>
+
+

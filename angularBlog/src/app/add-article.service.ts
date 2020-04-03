@@ -1,9 +1,8 @@
 import { Injectable } from '@angular/core';
 
+
 @Injectable({
   providedIn: 'root'
 })
-export class AddArticleService {
+export class AddArticleService {}
 
-  constructor() { }
-}

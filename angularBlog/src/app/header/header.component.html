@@ -6,11 +6,19 @@
             <li><a routerLink="/">Start</a></li>
             <li><a routerLink="/latest-articles">Latest articles</a></li>
             <li><a routerLink="/all-articles">All articles</a></li>
-            <li><a routerLink="/log-in">Login</a></li>
-            <li><a routerLink="/add-article">Add article</a></li>
+            <li *ngIf="!isLoggedIn"><a routerLink="/log-in">Login</a></li>
+            <li *ngIf="isLoggedIn"><a routerLink="/add-article">{{ navbar.addArticles }}</a></li>
+            <li *ngIf="isLoggedIn"><h5 class="welcome">{{ navbar.welcome }}</h5></li>
         </ul>
       </nav>
     </div>   
-</header>
+</header> 
+
+
+
+
+
+
+
 
 

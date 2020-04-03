@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { LogInService } from '../log-in.service';
 
 @Component({
   selector: 'app-log-in',
@@ -7,9 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LogInComponent implements OnInit {
 
-  constructor() { }
+  @Output() change = new EventEmitter();
 
-  ngOnInit(): void {
+  constructor(private service: LogInService) { }
+
+  ngOnInit(): void { }
+
+  login() { 
+    this.service.login();
   }
 
 }
