@@ -4,7 +4,7 @@ ul li{
   
   .headernav{
     text-align: center;
-    height: 150px;
+    height: auto;
     position: fixed;
     top: 0;
     left: 0;
@@ -36,6 +36,6 @@ ul li{
     background-color: green;
 	color: black;
 	font-size: 1.5em;
-	padding: 10px;
+	padding: 5px;
 	border-radius: 5px;
   }
