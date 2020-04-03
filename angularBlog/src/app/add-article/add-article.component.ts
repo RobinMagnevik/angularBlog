@@ -16,6 +16,7 @@ export class AddArticleComponent implements OnInit {
   articleContent:string;
   articleWriter:string;
   articleTime:number;
+  message:boolean = true;
 
   constructor(public articleDataService: ArticleDataService) { }
 
@@ -37,4 +38,9 @@ export class AddArticleComponent implements OnInit {
   addNewArticle(){
     this.articleDataService.addArticleList(this.articleTitle, this.articleContent, this.articleWriter,this.articleTime)
   }
+
+  submittedMessage(){
+	  this.message = !this.message;
+  }
+
 }

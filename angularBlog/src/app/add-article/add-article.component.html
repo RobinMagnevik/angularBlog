@@ -35,6 +35,8 @@
             
         </div>
 
-        <button (click)='addNewArticle()' [disabled]="userForm.form.invalid" class="btn btn-secondary">Submit!</button> 
+		<button (click)='addNewArticle()' (click)='submittedMessage()' [disabled]="userForm.form.invalid" class="btn btn-secondary">Submit!</button> 
+		
+		<br> <p [hidden] = "message"> Your blog post is submitted! </p>
     </form>
 </div>
