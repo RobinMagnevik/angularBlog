@@ -1,6 +1,6 @@
-<div class="container-fluid mb-5">
+<div class="container">
     <h1>Lägg till artiklar</h1>
-    <form #userForm="ngForm"  novalidate ng-submit="">
+    <form #userForm="ngForm" novalidate ng-submit="">
 
 
         <div class="form-group">
@@ -35,8 +35,8 @@
             
         </div>
 
-		<button (click)='addNewArticle()' (click)='submittedMessage()' [disabled]="userForm.form.invalid" class="btn btn-secondary">Submit!</button> 
+		<button (click)='addNewArticle()' (click)='userForm.reset({})' (click)='submittedMessage()' [disabled]="userForm.form.invalid" class="btn btn-secondary" >Submit!</button> 
 		
-		<br> <p [hidden] = "message"> Your blog post is submitted! </p>
+		<br> <p class="message" [hidden] = "message"> Your blog post is submitted! </p>
     </form>
 </div>
