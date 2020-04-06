@@ -1,9 +1,10 @@
 <br><br>
-<div class="container"><h3>Are you the Blogger?</h3>
-<button (click)="login();">Yes, it's me!</button> <br><br><br>
+<div [hidden]="hide" class="container"><h3>Are you the Blogger?</h3>
+<button (click)="login();">Yes, it's me!</button> <br><br><br></div>
 
+<h3 [hidden]="!welcome">Welcome blogger!<br><br><br></h3>
 
-<app-ajaxapi class="api"></app-ajaxapi></div>
+<app-ajaxapi class="api"></app-ajaxapi>
 
 
 

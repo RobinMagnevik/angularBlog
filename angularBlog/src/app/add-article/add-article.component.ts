@@ -9,7 +9,7 @@ import { RangeValueAccessor } from '@angular/forms';
   styleUrls: ['./add-article.component.css']
 })
 export class AddArticleComponent implements OnInit {
-  userModel = new ArticleClass("", "", "", null)
+	bloggerModel = new ArticleClass("", "", "", null)
 
   newArticle: ArticleClass;
   articleTitle:string;
